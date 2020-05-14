@@ -2,6 +2,7 @@
 
 public class Enemy : MonoBehaviour
 {
+
     public float health = 200f;
 
     public void TakeDamage(float amount)
@@ -18,7 +19,7 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
-
+        GameManager.instance.KillEnemy();
         Destroy(gameObject);
 
     }

@@ -17,7 +17,6 @@ public class Gun : MonoBehaviour
     private LineRenderer laserLine;
     private float nextFire;
 
-
     void Start()
     {
         laserLine = GetComponent<LineRenderer>();
@@ -49,9 +48,11 @@ public class Gun : MonoBehaviour
 
                 Enemy health = hit.collider.GetComponent<Enemy>();
 
+
                 if (health != null)
                 {
                     health.TakeDamage(damage);
+                   
                 }
                 if (hit.rigidbody != null)
                 {
